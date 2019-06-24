@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRIVIA GAME</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h2>TRIVIA GAME</h2>
+    <div id="startbutton"></div>
+    <div id="timer"></div>
+    <div id="correct"></div>
+    <div id="incorrect"></div>
+    <div id="unanswered"></div>
+    <div id="question"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        var number = 40;
+        var intervalId = null;
+
+        function run() {
+            if (intervalId === null) {
+                intervalId = setInterval(decrement, 1000);
+            }
+        }
+
+        function decrement() {
+            number--;
+            $("#timer").html("<h2>" + number + "</h2>");
+            if (number === 0) {
+                stop();
+                alert("Time Up!");
+            }
+        }
+
+
+        function stop() {
+            clearInterval(intervalId);
+        }
+
+        run();
+
+    </script>
+
+</body>
+
+</html>
