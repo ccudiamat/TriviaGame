@@ -1,4 +1,17 @@
-h1 {
-    float: center;
-    border: 2px;
-}
+body { 
+    background: lightblue;
+  }
+  
+  #display {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    color: black;
+    text-align: center;
+    background: lightblue;
+  }
+  
+  button {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
